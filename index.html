@@ -53,6 +53,7 @@
             transition: transform .18s ease;
         }
 
+        
         body::before {
             content: '';
             position: fixed; inset: 0;
@@ -921,7 +922,6 @@
                 dotEls.forEach((d,i) => d.classList.toggle('lit', i < litDots));
             });
 
-            // click: pulse ring
             ring.addEventListener('click', () => {
                 ring.style.transition = 'box-shadow .1s';
                 ring.style.boxShadow = '0 0 0 1px rgba(192,24,42,.8), 0 0 40px rgba(192,24,42,.5), inset 0 3px 10px rgba(0,0,0,.6)';
