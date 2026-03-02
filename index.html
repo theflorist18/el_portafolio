@@ -37,6 +37,7 @@
             cursor: none;
         }
 
+        /* ── CURSOR ──────────────────────────────────────────── */
         .cursor {
             position: fixed; width: 10px; height: 10px;
             background: var(--red);
@@ -53,7 +54,7 @@
             transition: transform .18s ease;
         }
 
-        
+        /* ── CARBON TEXTURE ─────────────────────────────────── */
         body::before {
             content: '';
             position: fixed; inset: 0;
@@ -69,6 +70,7 @@
             pointer-events: none; z-index: 9989;
         }
 
+        /* ── HEADER ─────────────────────────────────────────── */
         header {
             position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
             padding: 0 50px; height: 64px;
@@ -105,6 +107,7 @@
         nav a:hover, nav a.active { color: var(--white); }
         nav a:hover::after, nav a.active::after { width: 100%; }
 
+        /* ── SECTIONS ───────────────────────────────────────── */
         section { min-height: 100vh; padding: 130px 70px 90px; position: relative; }
         .container { max-width: 1240px; margin: 0 auto; }
 
@@ -125,6 +128,7 @@
         }
         .section-title em { color: var(--red); font-style: normal; }
 
+        /* ── HERO ───────────────────────────────────────────── */
         #intro {
             display: flex; align-items: center;
             padding-top: 64px; overflow: hidden;
@@ -207,6 +211,7 @@
         }
         .btn-ghost:hover { border-color: rgba(200,200,200,.6); color: var(--white); }
 
+        /* ── HERO RIGHT — INTERACTIVE GAUGES ────────────────── */
         .hero-right {
             display: flex; flex-direction: column; align-items: center;
             justify-content: center; gap: 48px;
@@ -223,6 +228,7 @@
             display: flex; gap: 36px; align-items: center;
         }
 
+        /* big centre gauge */
         .gauge-main {
             display: flex; flex-direction: column; align-items: center; gap: 14px;
             cursor: none;
@@ -233,6 +239,7 @@
         .gauge-main .gauge-num { font-size: 52px; }
         .gauge-main .gauge-label { font-size: 11px; letter-spacing: 3px; }
 
+        /* small side gauges */
         .gauge-side {
             display: flex; flex-direction: column; align-items: center; gap: 10px;
             cursor: none;
@@ -253,6 +260,7 @@
             transition: box-shadow .3s;
         }
 
+        /* SVG ring progress */
         .gauge-ring svg {
             position: absolute; inset: 0; width: 100%; height: 100%;
             transform: rotate(-90deg);
@@ -298,6 +306,7 @@
         }
         .gauge-ring:hover .gauge-tooltip { opacity: 1; transform: translateX(-50%) translateY(0); }
 
+        /* animated dots below gauges */
         .gauge-dots {
             display: flex; gap: 6px; justify-content: center;
         }
@@ -311,12 +320,14 @@
         @keyframes riseUp { from { opacity:0; transform:translateY(32px); } to { opacity:1; transform:none; } }
         @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 
+        /* ── DIVIDER ─────────────────────────────────────────── */
         .divider {
             height: 2px;
             background: linear-gradient(90deg, transparent, var(--steel) 15%, var(--red) 50%, var(--steel) 85%, transparent);
             opacity: .8;
         }
 
+        /* ── EXPERIENCE ─────────────────────────────────────── */
         #experience { background: var(--deep); }
 
         .skills-grid {
@@ -357,6 +368,7 @@
         }
         .skill-list li::before { content: ''; width: 18px; height: 1px; background: var(--red); flex-shrink: 0; }
 
+        /* ── PROJECTS ───────────────────────────────────────── */
         #projects { background: var(--black); }
 
         .projects-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 28px; margin-top: 60px; }
@@ -415,6 +427,7 @@
         .btn-red:hover::before { transform: translateX(0); }
         .btn-red span { position: relative; z-index: 1; }
 
+        /* ── WRITEUPS ───────────────────────────────────────── */
         #writeups { background: var(--deep); }
 
         .writeups-grid {
@@ -446,6 +459,7 @@
         .writeup-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
         .writeup-tag { font-family: var(--font-mono); font-size: 9px; letter-spacing: 1px; text-transform: uppercase; padding: 3px 10px; border: 1px solid rgba(200,200,200,.18); color: var(--chrome2); }
 
+        /* ── CONTACT ────────────────────────────────────────── */
         #contact { background: var(--black); }
 
         .contact-layout {
@@ -505,6 +519,7 @@
         .avail-location { font-family: var(--font-mono); font-size: 11px; letter-spacing: 2px; color: var(--chrome2); }
         .avail-location span { color: var(--red2); }
 
+        /* ── SCROLL DOTS ────────────────────────────────────── */
         .scroll-bar { position: fixed; right: 22px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 14px; z-index: 500; }
         .s-dot-wrap {
             position: relative; display: flex; align-items: center; justify-content: flex-end;
@@ -537,13 +552,16 @@
         }
         .s-dot-wrap:hover .s-dot-label { opacity: 1; transform: translateX(0); }
 
+        /* ── FOOTER ─────────────────────────────────────────── */
         footer { background: var(--deep); border-top: 1px solid rgba(220,220,220,.08); padding: 24px 70px; display: flex; align-items: center; justify-content: space-between; }
         footer p { font-family: var(--font-mono); font-size: 11px; letter-spacing: 2px; color: var(--chrome2); }
         footer span { color: var(--red2); }
 
+        /* ── TOAST ─────────────────────────────────────────── */
         .toast { position: fixed; bottom: 36px; left: 50%; transform: translateX(-50%) translateY(16px); background: var(--carbon); border: 1px solid var(--red); color: var(--red2); font-family: var(--font-mono); font-size: 11px; letter-spacing: 2px; padding: 10px 28px; opacity: 0; pointer-events: none; transition: opacity .3s, transform .3s; z-index: 9995; }
         .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
+        /* ── RESPONSIVE ─────────────────────────────────────── */
         @media (max-width: 960px) {
             section { padding: 100px 24px 60px; }
             header { padding: 0 24px; }
@@ -585,6 +603,7 @@
         </nav>
     </header>
 
+    <!-- ══════════════════ HERO ══════════════════ -->
     <section id="intro">
         <div class="hero-stripe"></div>
         <div class="container">
@@ -604,10 +623,12 @@
                     </div>
                 </div>
 
+                <!-- INTERACTIVE GAUGE CLUSTER -->
                 <div class="hero-right">
                     <p class="gauges-title">// system stats</p>
                     <div class="gauges-cluster">
 
+                        <!-- Side gauge: Projects -->
                         <div class="gauge-side">
                             <div class="gauge-ring" id="g-projects" data-val="2" data-max="10" data-tip="2 pentest reports published">
                                 <svg viewBox="0 0 100 100"><circle class="track" cx="50" cy="50" r="44"/><circle class="progress" cx="50" cy="50" r="44"/></svg>
@@ -620,6 +641,7 @@
                             <div class="gauge-dots" id="dots-projects"></div>
                         </div>
 
+                        <!-- Main gauge: Writeups -->
                         <div class="gauge-main">
                             <div class="gauge-ring" id="g-writeups" data-val="4" data-max="10" data-tip="4 CTF writeups completed">
                                 <svg viewBox="0 0 100 100"><circle class="track" cx="50" cy="50" r="44"/><circle class="progress" cx="50" cy="50" r="44"/></svg>
@@ -632,6 +654,7 @@
                             <div class="gauge-dots" id="dots-writeups"></div>
                         </div>
 
+                        <!-- Side gauge: HTB -->
                         <div class="gauge-side">
                             <div class="gauge-ring" id="g-htb" data-val="6" data-max="10" data-tip="Active on HackTheBox">
                                 <svg viewBox="0 0 100 100"><circle class="track" cx="50" cy="50" r="44"/><circle class="progress" cx="50" cy="50" r="44"/></svg>
@@ -652,6 +675,7 @@
 
     <div class="divider"></div>
 
+    <!-- ══════════════════ EXPERIENCE ══════════════════ -->
     <section id="experience">
         <div class="container">
             <p class="section-label reveal">01 // Arsenal</p>
@@ -687,6 +711,7 @@
 
     <div class="divider"></div>
 
+    <!-- ══════════════════ PROJECTS ══════════════════ -->
     <section id="projects">
         <div class="container">
             <p class="section-label reveal">02 // Operations</p>
@@ -734,6 +759,7 @@
 
     <div class="divider"></div>
 
+    <!-- ══════════════════ WRITEUPS ══════════════════ -->
     <section id="writeups">
         <div class="container">
             <p class="section-label reveal">03 // Field Notes</p>
@@ -769,6 +795,7 @@
 
     <div class="divider"></div>
 
+    <!-- ══════════════════ CONTACT ══════════════════ -->
     <section id="contact">
         <div class="container">
             <p class="section-label reveal">04 // Connect</p>
@@ -830,6 +857,7 @@
     </footer>
 
     <script>
+        // ── CURSOR ──────────────────────────────────────────
         const cur = document.getElementById('cursor');
         const ring = document.getElementById('cursorRing');
         let mx=0,my=0,rx=0,ry=0;
@@ -845,12 +873,14 @@
             el.addEventListener('mouseleave', () => { cur.style.transform='translate(-50%,-50%) scale(1)'; ring.style.opacity='1'; });
         });
 
+        // ── REVEAL ON SCROLL ────────────────────────────────
         const obs = new IntersectionObserver(
             entries => entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }),
             { threshold: .08 }
         );
         document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
+        // ── NAV + SCROLL DOTS ────────────────────────────────
         const secs  = [...document.querySelectorAll("section")];
         const links = [...document.querySelectorAll(".nav-link")];
         const wraps = [...document.querySelectorAll(".s-dot-wrap")];
@@ -865,6 +895,7 @@
             document.getElementById(id).scrollIntoView({ behavior: "smooth" });
         }
 
+        // ── COPY + TOAST ─────────────────────────────────────
         const toast = document.getElementById('toast');
         function copy(txt, msg) {
             navigator.clipboard.writeText(txt).then(() => {
@@ -874,6 +905,7 @@
             });
         }
 
+        // ── INTERACTIVE GAUGES ───────────────────────────────
         function buildDots(containerId, count, lit) {
             const c = document.getElementById(containerId);
             if (!c) return;
@@ -889,12 +921,14 @@
             const r = 44;
             const circumference = 2 * Math.PI * r;
             const pct = val / max;
+            // start at 0, animate in
             circle.style.strokeDasharray = `0 ${circumference}`;
             setTimeout(() => {
                 circle.style.strokeDasharray = `${circumference * pct} ${circumference}`;
             }, 300);
         }
 
+        // Configs: [ringId, dotsContainerId, val, max, dotCount, litDots]
         const gaugeConfigs = [
             ['g-projects', 'dots-projects', 2,  10, 5, 2],
             ['g-writeups', 'dots-writeups', 4,  10, 5, 4],
@@ -907,6 +941,7 @@
             buildDots(did, dotCount, litDots);
             animateGauge(ring, val, max);
 
+            // hover: spin dot lights
             let interval = null;
             ring.addEventListener('mouseenter', () => {
                 const dotEls = document.getElementById(did).querySelectorAll('.gauge-dot');
@@ -922,6 +957,7 @@
                 dotEls.forEach((d,i) => d.classList.toggle('lit', i < litDots));
             });
 
+            // click: pulse ring
             ring.addEventListener('click', () => {
                 ring.style.transition = 'box-shadow .1s';
                 ring.style.boxShadow = '0 0 0 1px rgba(192,24,42,.8), 0 0 40px rgba(192,24,42,.5), inset 0 3px 10px rgba(0,0,0,.6)';
